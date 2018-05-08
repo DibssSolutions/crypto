@@ -1,0 +1,67 @@
+.slider
+	color: $white 
+	border-radius: 0 0 10px 10px
+	box-shadow: 4px 6.9px 24px rgba(0, 0, 0, 0.36)
+	+md
+		border-radius: 10px 
+	&__slide
+		padding: 88px 44px
+		min-height: 305px
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-size: cover
+		border-radius: 0 0 10px 10px
+		background-image: linear-gradient(-17deg, #2e4281 0%, #415db5 100%)
+		+md
+			padding: 40px 15px
+			border-radius: 10px 
+	&__title
+		max-width: 525px
+		letter-spacing: -0.01em 
+	&__next,
+	&__prev
+		position: absolute
+		top: 50%
+		margin-top: -32px
+		font-size: 0
+		+lg
+			display: none
+	&__next
+		right: -70px
+		+r(1350)
+			right: -50px
+	&__prev
+		left: -70px
+		+r(1350)
+			left: -50px
+	.owl-dots
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		bottom: 22px
+		font-size: 0
+		text-align: center
+		button
+			position: relative
+			width: 18px
+			height: 18px
+			background-color: $white
+			border-radius: 50% 
+			display: inline-block
+			vertical-align: top
+			&:not(:first-child)
+				margin-left: 13px
+			&:before
+				position: absolute
+				content: ""
+				top: 4px
+				left: 4px
+				width: 10px
+				height: 10px
+				border-radius: 50% 
+				background-color: #3d57aa
+				opacity: 0
+			&.active
+				&:before
+					opacity: 1

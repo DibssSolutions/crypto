@@ -4,14 +4,21 @@
 	padding: 53px 0 43px
 	display: flex
 	justify-content: space-between
+	+md
+		padding: 30px 0 
 .logo
+	position: relative
 	width: 177px
+	z-index: 101
+	+md
+		width: 100px
 	img
 		max-width: 100%
 		display: block
 .contacts
 	padding-top: 34px
-	&__phone
+	+md 
+		display: none
 	&__addres
 		padding-left: 42px 
 
@@ -20,20 +27,50 @@
 	font-weight: 300
 .reservation
 	padding-top: 34px
-.navigation
-	&__block
+	+md 
 		display: none
-		+sm
+.navigation
+	+md
+		position: absolute
+		top: 0
+		left: 0
+		padding: 120px 20px 40px
+		width: 100vw
+		z-index: 100
+		text-align: center
+		opacity: 0
+		visibility: hidden
+		transition: opacity .25s linear, visibility .25s linear
+		-webkit-box-shadow: 0 0 -20px 10px rgba($black, 0.2) 
+		box-shadow: 0 0 20px 10px rgba($black, 0.2) 
+		background-color: $white
+	.header.is-open-menu &
+		+md
+			opacity: 1
+			visibility: visible
+	&__block,
+	&__reservation.reservation,
+	&__contacts
+		display: none
+		+md
 			display: block
 .menu
+	margin-bottom: 0
 	display: table
 	width: 100%
 	text-align: center
+	+md
+		display: block
+	&_main
+		border-radius: 10px 10px 0 0 
+		box-shadow: 4px 6.9px 24px rgba(0, 0, 0, 0.36)
 	&__item,
 	li
 		position: relative
 		display: table-cell
 		vertical-align: top
+		+md
+			display: block
 		&:not(:first-child)
 			margin-left: 1px
 			&:before
@@ -57,9 +94,14 @@
 		display: block
 		z-index: 1
 		background-image: linear-gradient(to top, #2e4281 0%, #415db5 100%)
+		+md
+			background-image: none
+			color: $blue
 		&:hover
 			&:before
 				opacity: 1 
+				+md
+					opacity: 0
 		&:before
 			position: absolute
 			content: ""
@@ -74,9 +116,13 @@
 			.menu__item:first-child &,
 			li:first-child &
 				border-radius: 10px 0 0 10px 
+				.menu.menu_main &
+					border-radius: 10px 0 0 0
 			.menu__item:last-child &,
 			li:last-child &
 				border-radius: 0 10px 10px 0
+				.menu.menu_main &
+					border-radius: 0 10px 0 0
 		&:after
 			position: absolute
 			content: ""
@@ -89,15 +135,61 @@
 		.menu__item:first-child &,
 		li:first-child &
 			border-radius: 10px 0 0 10px 
+			.menu.menu_main &
+				border-radius: 10px 0 0
 		.menu__item:last-child &,
 		li:last-child &
 			border-radius: 0 10px 10px 0
+			.menu.menu_main &
+				border-radius: 0 10px 0 0
 		.menu__item.is-active &,
 		li.is-active &
+			+md
+				color: $red
 			&:before,
 			&:after
 				opacity: 1 
+				+md
+					display: none
 				
 .btn-menu
-	span
+	position: relative
+	width: 52px
+	height: 56px
+	background: none
+	cursor: pointer
+	z-index: 101
+	display: none
+	+md 
 		display: block
+	.header.is-open-menu &
+		&:before
+			transform: translate3d(3px,0,0) rotate(45deg)
+		&:after
+			transform: translate3d(3px,0,0) rotate(-45deg)
+		span 
+			opacity: 0
+			transform: scaleX(0.5)
+	span,
+	&:before,
+	&:after
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -10px
+		border-top: 2px solid #3a53a3
+		width: 20px
+	&:before,
+	&:after
+		content: ''
+		transition: transform 0.3s
+	span 
+		margin-top: -1px
+		transition: opacity 0.3s, transform 0.3s
+		transform-origin: left center
+	&:before
+		margin-top: -8px
+		transform-origin: left top
+	&:after
+		margin-top: 6px
+		transform-origin: left bottom
