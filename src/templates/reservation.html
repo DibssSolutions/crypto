@@ -1,0 +1,86 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{{ header.block() }}
+	<div class="wrapper">
+		<div class="container">
+			<div class="reservations">
+				<h2 class="h2">Подтверждение брони</h2>
+				<div class="row">
+					<div class="col-lg-6">	
+						<div class="reservations__left">
+							<div class="reservations__block">
+								<div class="reservations__block-header">
+									<a href="http://via.placeholder.com/750x550" class="reservations__room-picture" style="background-image: url(http://via.placeholder.com/269x157);"></a>
+									<div class="reservations__info">
+										<div class="reservations__subtitle">Standard Twin Room</div>	
+										<div class="reservations__list">
+											<div class="reservations__item">
+												<span class="reservations__label">Дата заезда/выезда:</span>4 чел.
+											</div>
+											<div class="reservations__item">
+												<span class="reservations__label">Кол-во гостей:</span>4 чел.
+											</div>	
+										</div>
+										<div class="reservations__price"><span class="reservations__labels">Итого:</span> 4 500 руб.</div>
+									</div>
+								</div>
+								<div class="reservations__services">
+									<span class="reservations__services-title">Услуги:</span>
+									<ul class="reservations__list-icon">
+										<li class="reservations__item-icon">
+											<span class="icon-wi-fi"></span>
+										</li>
+										<li class="reservations__item-icon">
+											<span class="icon-ordinator"></span>
+										</li>
+										<li class="reservations__item-icon">
+											<span class="icon-safe"></span>
+										</li>
+										<li class="reservations__item-icon">
+											<span class="icon-tv"></span>
+										</li>
+										<li class="reservations__item-icon">
+											<span class="icon-reservations-gr"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<div class="col-lg-6">
+						<div class="reservations__right">
+							<ul class="reservations__list-contact">
+								<li class="reservations__item-contact">Имя:  Алексей Миронов</li>
+								<li class="reservations__item-contact">Почта:  3dteapot@gmail.com</li>
+								<li class="reservations__item-contact">Телефон:  +375 29 369-89-96</li>
+								<li class="reservations__item-contact">Особые пожелания:  Много полотенец и воды</li>
+							</ul>
+							<div class="reservations__description">
+								<p>Информация об отеле:</p>
+								<p>Телефон службы бронирования: 8-612-810-87-98</p>
+								<p>Адрес: Россия, г. Санкт-Петербург, пл. Чернышевского, 11</p>
+							</div>
+							<div class="reservations__buttons">
+								<a href="#" class="reservations__btn btn">
+									<span class="btn__text">Отправить подтверждение на почту  </span>
+								</a>
+								<span class="reservations__or">или</span>
+								<a href="#" class="reservations__btn btn">
+									<span class="btn__text">Отправить смс</span>
+								</a>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="map" id="map"></div>
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

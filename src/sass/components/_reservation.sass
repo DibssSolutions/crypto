@@ -1,0 +1,120 @@
+.reservations
+	&__left
+		padding-right: 15px
+		+r(991)
+			padding-right: 0
+	&__right
+		padding-left: 18px 
+		position: relative
+		+r(991)
+			padding-left: 0
+		&:before
+			content: ''
+			position: absolute
+			border: 1px dashed #ababab
+			width: 1px
+			height: 333px
+			left: -15px
+			+r(991)
+				display: none
+	&__block-header
+		margin-bottom: 30px
+		+clr
+		+r(991)
+			margin-bottom: 10px
+	&__room-picture
+		width: 269px
+		display: block
+		padding-bottom: 28%
+		background-size: cover
+		background-position: 50% 50%
+		border-radius: 10px
+		background-repeat: no-repeat  
+		float: left
+		+r(1280)
+			float: none
+			margin-bottom: 30px
+		+r(991)
+			margin-bottom: 10px 
+		+r(767)
+			width: 100%
+			padding-bottom: 48%
+	&__subtitle
+		font-size: 21px
+		font-weight: 400
+		margin-bottom: 5px
+	&__list
+		margin-bottom: 30px
+		+r(991)
+			margin-bottom: 10px
+	&__item
+		font-weight: 300
+		font-size: 14px
+		&:not(:last-child)
+			margin-bottom: 3px 
+	&__label
+		font-weight: 700
+		font-size: 14px
+		margin-right: 5px
+	&__price
+		font-size: 21px
+		font-weight: 400 
+	&__labels
+		font-weight: 600  
+	&__info
+		overflow: hidden
+		padding-left: 36px
+		+r(1280)
+			padding-left: 0
+	&__services
+		display: flex
+		align-items: center
+		padding: 21px 0
+		border-top: 1px dashed #ababab
+		border-bottom: 1px dashed #ababab
+		+r(991)
+			padding: 8px 0 
+		+sm
+			order: -1
+			margin-bottom: 15px
+		ul
+			margin-bottom: 0 
+	&__services-title
+		font-size: 14px
+		line-height: 20px
+		margin-right: 15px
+	&__list-icon
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+	&__item-icon
+		&:not(:last-child)
+			margin-right: 15px
+	&__item-contact
+		border-bottom: 1px dashed #ababab
+		font-size: 21px
+		font-weight: 400
+		line-height: 40px
+	&__description
+		font-weight: 300
+		margin-bottom: 20px
+		font-weight: 400 
+		p
+			margin-bottom: 0
+	&__buttons
+		display: flex
+		align-items: flex-start
+		flex-wrap: wrap
+	&__btn
+		margin-bottom: 10px
+		+r(767)
+			margin-bottom: 10px
+			height: auto
+			min-height: 48px
+			line-height: 1.2
+			vertical-align: top
+			text-align: center
+	&__or
+		font-weight: 300
+		font-size: 12px
+		margin: 16px 11px 10px   
