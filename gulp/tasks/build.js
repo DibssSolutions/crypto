@@ -6,7 +6,7 @@ function build(cb) {
     runSequence(
         'clean',
         'sprite:svg',
-        'svgo',
+        'sprite:png',
         'sass',
         'nunjucks',
         'webpack',

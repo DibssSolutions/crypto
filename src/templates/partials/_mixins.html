@@ -1,3 +1,14 @@
 {% macro icon(i) %}
 <svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
+{% macro nav(props) %}
+<!-- begin navigation -->
+<nav class="navigation">
+	<ul class="menu">
+		{% for text in ['Главная', 'Номера и цены', 'Услуги', 'Фотогалерея', 'Контакты'] %}
+			<li class="menu__item{% if props.activeIndex == loop.index %} is-active{% endif %}"><a class="menu__link" href="#">{{ text }}</a></li>
+		{% endfor %}
+	</ul>
+</nav>
+<!-- end navigation -->
+{% endmacro %}

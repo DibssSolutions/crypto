@@ -1,0 +1,21 @@
+.btn
+	padding: 14px 25px 10px
+	height: 48px
+	line-height: 1
+	color: $white 
+	font-size: 16px
+	font-weight: 400
+	background-color: $red
+	border-radius: 10px
+	vertical-align: top
+	display: inline-block
+	+hover
+		.btn
+			&__text
+				border-bottom-color: transparent 
+	&__text
+		transition: border-bottom-color .25s linear
+		border-bottom: 1px dotted currentColor 
+	.icon-reservation
+		margin: -10px 15px -10px 0
+		vertical-align: middle

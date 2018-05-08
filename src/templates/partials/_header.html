@@ -1,1 +1,28 @@
-<p>Hello from partials/_header.html</p>
+<!-- begin header -->
+<header class="header">
+	<div class="container">
+		<div class="header-head">
+			<!-- begin logo -->
+			<a href="#" class="logo">
+				<img src="./img/logo.png" alt="img">
+			</a>
+			<!-- end logo -->
+			<!-- begin contacts -->
+			<div class="contacts">
+				<a href="tel:86128108797" class="contacts__phone phone"><span class="phone__icon"></span>8-612-810-87-97</a>
+				<div class="contacts__addres address">Россия, г. Санкт-Петербург, пл. Чернышевского, 11</div>
+			</div>
+			<!-- end contacts -->
+			<!-- begin reservation -->
+			<div class="reservation">
+				<a href="#" class="btn">
+					<span class="icon-reservation"></span>
+					<span class="btn__text">Забронировать</span>
+				</a>
+			</div>
+			<!-- end reservation -->
+		</div>
+		{{ mixins.nav() }}
+	</div>
+</header>
+<!-- end header -->
