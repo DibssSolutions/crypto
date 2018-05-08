@@ -1,11 +1,12 @@
 ---
 title: Index page
+menuActiveIndex: 1
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
 	
-	{% include "partials/_header.html" %}
+	{{ header.block(1) }}
 	<div class="wrapper"></div>
 	<div class="map" id="map"></div>
 	{% include "partials/_footer.html" %}
