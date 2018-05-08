@@ -20,7 +20,11 @@
 	font-weight: 300
 .reservation
 	padding-top: 34px
-// .navigation
+.navigation
+	&__block
+		display: none
+		+sm
+			display: block
 .menu
 	display: table
 	width: 100%
@@ -93,4 +97,7 @@
 			&:before,
 			&:after
 				opacity: 1 
-	
+				
+.btn-menu
+	span
+		display: block
