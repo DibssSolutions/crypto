@@ -1,0 +1,43 @@
+title: Index contacts
+---
+menuActiveIndex: 5
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    
+    {{ header.block(5) }}
+	<!-- start gallery -->
+	<div class="wrapper">
+		<div class="container">
+			<h3>Фотографии двухспального номера</h3>
+			<!-- begin contact -->
+			<div class="contact">
+				<div class="contact__addres address">
+					2200982, Россия, г. Санкт-Петербург, пл. Чернышевского, 11
+					<span class="contact__mail">
+						Email: 
+						<a href="#" class="contact__mail-link">
+							support@russia.ru
+						</a>
+					</span>
+				</div>
+				<span class="contact__line row-line"></span>
+				<div class="contact__wrap">
+					<a href="tel:86128108797" class="contact__phone phone">
+						<span class="phone__icon"></span>
+							8-612-810-87-97
+					</a>
+					<span class="contact__phone-info">
+						— Телефон службы бронирования. Работает круглосуточно!
+					</span>
+				</div>
+			</div>	
+			<!-- end contact -->
+		</div>	
+	</div>
+	<!-- end gallery -->
+	<div class="map" id="map"></div>
+	{% include "partials/_footer.html" %}
+
+{% endblock %}
