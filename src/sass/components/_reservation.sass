@@ -20,6 +20,8 @@
 	&__block-header
 		margin-bottom: 30px
 		+clr
+		+r(991)
+			margin-bottom: 10px
 	&__room-picture
 		width: 269px
 		display: block
@@ -31,15 +33,20 @@
 		float: left
 		+r(1280)
 			float: none
+			margin-bottom: 30px
+		+r(991)
+			margin-bottom: 10px 
 		+r(767)
 			width: 100%
-			padding-bottom: 48% 
+			padding-bottom: 48%
 	&__subtitle
 		font-size: 21px
 		font-weight: 400
 		margin-bottom: 5px
 	&__list
 		margin-bottom: 30px
+		+r(991)
+			margin-bottom: 10px
 	&__item
 		font-weight: 300
 		font-size: 14px
@@ -64,7 +71,9 @@
 		align-items: center
 		padding: 21px 0
 		border-top: 1px dashed #ababab
-		border-bottom: 1px dashed #ababab 
+		border-bottom: 1px dashed #ababab
+		+r(991)
+			padding: 8px 0 
 		+sm
 			order: -1
 			margin-bottom: 15px
@@ -89,6 +98,7 @@
 	&__description
 		font-weight: 300
 		margin-bottom: 20px
+		font-weight: 400 
 		p
 			margin-bottom: 0
 	&__buttons
@@ -103,7 +113,8 @@
 			min-height: 48px
 			line-height: 1.2
 			vertical-align: top
+			text-align: center
 	&__or
 		font-weight: 300
 		font-size: 12px
-		margin: 0 11px 10px   
+		margin: 16px 11px 10px   

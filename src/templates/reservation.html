@@ -1,12 +1,11 @@
 ---
 title: Index page
-menuActiveIndex: 1
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
 	
-	
+	{{ header.block() }}
 	<div class="wrapper">
 		<div class="container">
 			<div class="reservations">
@@ -67,23 +66,17 @@ menuActiveIndex: 1
 								<p>Адрес: Россия, г. Санкт-Петербург, пл. Чернышевского, 11</p>
 							</div>
 							<div class="reservations__buttons">
-								<!-- <div class="reservations__btn"> -->
-									<a href="#" class="reservations__btn btn">
-										<span class="btn__text">Отправить подтверждение на почту  </span>
-									</a>
-								<!-- </div> -->
+								<a href="#" class="reservations__btn btn">
+									<span class="btn__text">Отправить подтверждение на почту  </span>
+								</a>
 								<span class="reservations__or">или</span>
-								<!-- <div class="reservations__btn"> -->
-									<a href="#" class="reservations__btn btn">
-										<span class="btn__text">Отправить смс</span>
-									</a>
-								<!-- </div> -->
-							</div>
-							
+								<a href="#" class="reservations__btn btn">
+									<span class="btn__text">Отправить смс</span>
+								</a>
+							</div>	
 						</div>
 					</div>
 				</div>
-			
 			</div>
 		</div>
 	</div>

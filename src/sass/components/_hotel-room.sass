@@ -9,6 +9,8 @@
 		width: 212px
 		+md
 			float: none
+		+sm
+			width: 100%
 	&__info
 		overflow: hidden
 		padding-left: 25px
@@ -29,6 +31,7 @@
 	&__price
 		color: #000000
 		font-size: 21px
+		font-weight: 400 
 		+sm
 			display: none
 	&__list
@@ -36,9 +39,9 @@
 		border-bottom: 1px dashed #ababab
 		margin-bottom: 10px
 	&__item
-		font-size: 14px;
+		font-size: 14px
 	&__label
-		font-size: 14px;
+		font-size: 14px
 		font-weight: 700
 		margin-right: 5px 
 	&__descr
@@ -46,6 +49,7 @@
 			color: #000000
 			font-size: 14px
 			line-height: 20px
+			font-weight: 400 
 	&__reservation
 		margin-right: 31px 
 	&__services
@@ -67,19 +71,19 @@
 	&__item-icon
 		&:not(:last-child)
 			margin-right: 15px 
-	&__info-block
-		text-align: center
-		margin: 0 auto 
-		background-color: #8f2e20
-		padding: 17px 27px
-		max-width: 809px
-		border-radius: 10px
-		color: #ffffff;
-		font-size: 16px;
 	&__price-sm
-		color: #000000
 		font-size: 21px
 		display: none
 		margin-bottom: 15px
 		+sm
 			display: block
+.info-block-wrap
+	text-align: center
+.info-block
+	text-align: center
+	display: inline-block
+	background-color: #8f2e20
+	padding: 17px 27px
+	border-radius: 10px
+	color: $white
+	font-size: 16px
