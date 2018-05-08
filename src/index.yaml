@@ -2,14 +2,16 @@ ProjectTitle: crypto
 
 PageList:
 - file: page.html
-  ready: 50
+  ready: 100
 - file: hotel-room.html
-  ready: 50
+  ready: 100
 - file: gallery.html
   ready: 100
 - file: services.html
   ready: 100  
 - file: contacts.html
-  ready: 50
+  ready: 100
 - file: reservation.html
-  ready: 50
+  ready: 100
+- file: room_reservation.html
+  ready: 100

@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Index page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!-- begin header -->
+      <header class="header js-header">
+        <div class="container">
+          <div class="header-head">
+            <!-- begin logo --><a href="#" class="logo">
+				<img src="./img/logo.png" alt="img">
+			</a>
+            <!-- end logo -->
+            <!-- begin contacts -->
+            <div class="contacts"> <a href="tel:86128108797" class="contacts__phone phone"><span class="phone__icon"></span>8-612-810-87-97</a>
+              <div class="contacts__addres address">Россия, г. Санкт-Петербург, пл. Чернышевского, 11</div>
+            </div>
+            <!-- end contacts -->
+            <!-- begin reservation -->
+            <div class="reservation"> <a href="#" class="btn">
+					<span class="icon-reservation"></span>
+					<span class="btn__text">Забронировать</span>
+				</a> </div>
+            <!-- end reservation --><button class="btn-menu js-btn-menu">
+				<span class="btn-menu__line"></span>
+				<span class="btn-menu__line"></span>
+				<span class="btn-menu__line"></span>
+			</button> </div>
+          <!-- begin navigation -->
+          <div class="navigation js-navigation">
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Номера и цены</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Услуги</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Фотогалерея</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+            </ul>
+            <div class="navigation__block">
+              <!-- begin reservation -->
+              <div class="navigation__reservation reservation"> <a href="#" class="btn">
+				<span class="icon-reservation"></span>
+				<span class="btn__text">Забронировать</span>
+			</a> </div>
+              <!-- end reservation -->
+              <!-- begin contacts -->
+              <div class="navigation__contacts contacts"> <a href="tel:86128108797" class="contacts__phone phone"><span class="phone__icon"></span>8-612-810-87-97</a>
+                <div class="contacts__addres address">Россия, г. Санкт-Петербург, пл. Чернышевского, 11</div>
+              </div>
+              <!-- end contacts -->
+            </div>
+          </div>
+          <!-- end navigation -->
+        </div>
+      </header>
+      <!-- end header -->
+      <div class="wrapper">
+        <div class="container">
+          <div class="reservations">
+            <h2 class="h2">Подтверждение брони</h2>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="reservations__left">
+                  <div class="reservations__block">
+                    <div class="reservations__block-header"> <a href="http://via.placeholder.com/750x550" class="reservations__room-picture" style="background-image: url(http://via.placeholder.com/269x157);"></a>
+                      <div class="reservations__info">
+                        <div class="reservations__subtitle">Standard Twin Room</div>
+                        <div class="reservations__list">
+                          <div class="reservations__item"> <span class="reservations__label">Дата заезда/выезда:</span>4 чел. </div>
+                          <div class="reservations__item"> <span class="reservations__label">Кол-во гостей:</span>4 чел. </div>
+                        </div>
+                        <div class="reservations__price"><span class="reservations__labels">Итого:</span> 4 500 руб.</div>
+                      </div>
+                    </div>
+                    <div class="reservations__services"> <span class="reservations__services-title">Услуги:</span>
+                      <ul class="reservations__list-icon">
+                        <li class="reservations__item-icon"> <span class="icon-wi-fi"></span> </li>
+                        <li class="reservations__item-icon"> <span class="icon-ordinator"></span> </li>
+                        <li class="reservations__item-icon"> <span class="icon-safe"></span> </li>
+                        <li class="reservations__item-icon"> <span class="icon-tv"></span> </li>
+                        <li class="reservations__item-icon"> <span class="icon-reservations-gr"></span> </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="reservations__right">
+                  <form action="/" class="reservations-form">
+                    <div class="reservations-form__row reservations-form__row_input">
+                      <div class="input"><input type="text" placeholder="Фамилия"></div>
+                    </div>
+                    <div class="reservations-form__row reservations-form__row_input">
+                      <div class="input"><input type="text" placeholder="Имя"></div>
+                    </div>
+                    <div class="reservations-form__row reservations-form__row_input">
+                      <div class="input"><input type="text" placeholder="E-mail"></div>
+                    </div>
+                    <div class="reservations-form__row reservations-form__row_input">
+                      <div class="input"><input type="text" placeholder="Телефон"></div>
+                    </div>
+                    <div class="reservations-form__row">
+                      <div class="textarea"><textarea placeholder="Особые пожелания"></textarea></div>
+                      <div class="reservations-form__info">* Совершая бронирование, я подтверждаю, что мною прочитаны и приняты правила и условия</div>
+                    </div>
+                    <div class="reservations-form__row"> <a href="#" class="btn">
+										<span class="icon-reservation"></span>
+										<span class="btn__text">Забронировать</span>
+									</a> </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map" id="map"></div>
+      <!-- begin footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-phone"> <a href="tel:86128108797" class="phone"><span class="phone__icon"></span>8-612-810-87-97</a> </div>
+          <div class="footer-copy">
+            <p>&copy; Гостиница «Россия», город Санкт-Петербург. Официальный сайт.</p>
+            <p>Бронирование номеров по телефону или онлайн. Копирование информации без согласования запрещено.</p>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script>
+      var map = 'map';
+      var element = document.getElementById(map);
+      if (element)
+      {
+        ymaps.ready(init);
+
+        function init()
+        {
+          var myMap = new ymaps.Map(map,
+            {
+              center: [55.755773, 37.617761],
+              zoom: 9
+            },
+            {
+              searchControlProvider: 'yandex#search'
+            }),
+            myPlacemark = new ymaps.Placemark([55.755773, 37.617761]);
+          myMap.geoObjects.add(myPlacemark);
+          myMap.behaviors.disable('scrollZoom');
+          myPlacemark.events.add('mouseenter', function(e)
+          {
+            e.get('target').options.set('preset', 'islands#greenIcon');
+          }).add('mouseleave', function(e)
+          {
+            e.get('target').options.unset('preset');
+          });
+        }
+      }
+
+    </script>
+    <!-- END scripts -->
+  </body>
+
+</html>

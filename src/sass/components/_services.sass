@@ -16,9 +16,14 @@
 	position: relative
 	margin: 15px 5px  0
 	padding-bottom: 15px
+	+r(1280)
+		padding-left: 45px
 	&__icon
 		position: absolute
 		display: block
-		top: 19px
+		top: 15px
 		left: -25px
 		transform: translate(-50%,-50%)
+		+r(1280)
+			left: 0
+			transform: translate(0,-50%)

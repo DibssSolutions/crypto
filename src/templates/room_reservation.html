@@ -1,0 +1,90 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{{ header.block() }}
+	<div class="wrapper">
+		<div class="container">
+			<div class="reservations">
+				<h2 class="h2">Подтверждение брони</h2>
+				<div class="row">
+					<div class="col-lg-6">	
+						<div class="reservations__left">
+							<div class="reservations__block">
+								<div class="reservations__block-header">
+									<a href="http://via.placeholder.com/750x550" class="reservations__room-picture" style="background-image: url(http://via.placeholder.com/269x157);"></a>
+									<div class="reservations__info">
+										<div class="reservations__subtitle">Standard Twin Room</div>	
+										<div class="reservations__list">
+											<div class="reservations__item">
+												<span class="reservations__label">Дата заезда/выезда:</span>4 чел.
+											</div>
+											<div class="reservations__item">
+												<span class="reservations__label">Кол-во гостей:</span>4 чел.
+											</div>	
+										</div>
+										<div class="reservations__price"><span class="reservations__labels">Итого:</span> 4 500 руб.</div>
+									</div>
+								</div>
+								<div class="reservations__services">
+									<span class="reservations__services-title">Услуги:</span>
+									<ul class="reservations__list-icon">
+										<li class="reservations__item-icon">
+											<span class="icon-wi-fi"></span>
+										</li>
+										<li class="reservations__item-icon">
+											<span class="icon-ordinator"></span>
+										</li>
+										<li class="reservations__item-icon">
+											<span class="icon-safe"></span>
+										</li>
+										<li class="reservations__item-icon">
+											<span class="icon-tv"></span>
+										</li>
+										<li class="reservations__item-icon">
+											<span class="icon-reservations-gr"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<div class="col-lg-6">
+						<div class="reservations__right">
+							<form action="/" class="reservations-form">
+								<div class="reservations-form__row reservations-form__row_input">
+									<div class="input"><input type="text" placeholder="Фамилия"></div>
+								</div>
+								<div class="reservations-form__row reservations-form__row_input">
+									<div class="input"><input type="text" placeholder="Имя"></div>
+								</div>
+								<div class="reservations-form__row reservations-form__row_input">
+									<div class="input"><input type="text" placeholder="E-mail"></div>
+								</div>
+								<div class="reservations-form__row reservations-form__row_input">
+									<div class="input"><input type="text" placeholder="Телефон"></div>
+								</div>
+								<div class="reservations-form__row">
+									<div class="textarea"><textarea placeholder="Особые пожелания"></textarea></div>
+									<div class="reservations-form__info">* Совершая бронирование, я подтверждаю, что мною прочитаны и приняты правила и условия</div>
+								</div>
+								<div class="reservations-form__row">
+									<a href="#" class="btn">
+										<span class="icon-reservation"></span>
+										<span class="btn__text">Забронировать</span>
+									</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="map" id="map"></div>
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

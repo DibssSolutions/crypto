@@ -6,14 +6,16 @@
 	&__right
 		padding-left: 18px 
 		position: relative
+		height: 100%
 		+r(991)
 			padding-left: 0
 		&:before
 			content: ''
 			position: absolute
-			border: 1px dashed #ababab
+			border-left: 1px dotted #ababab
 			width: 1px
-			height: 333px
+			top: 0
+			bottom: 0
 			left: -15px
 			+r(991)
 				display: none
@@ -70,8 +72,8 @@
 		display: flex
 		align-items: center
 		padding: 21px 0
-		border-top: 1px dashed #ababab
-		border-bottom: 1px dashed #ababab
+		border-top: 1px dotted #ababab
+		border-bottom: 1px dotted #ababab
 		+r(991)
 			padding: 8px 0 
 		+sm
@@ -91,10 +93,12 @@
 		&:not(:last-child)
 			margin-right: 15px
 	&__item-contact
-		border-bottom: 1px dashed #ababab
+		padding: 5px 0
+		border-bottom: 1px dotted #ababab
 		font-size: 21px
 		font-weight: 400
-		line-height: 40px
+		&:first-child
+			padding-top: 0
 	&__description
 		font-weight: 300
 		margin-bottom: 20px
@@ -102,13 +106,13 @@
 		p
 			margin-bottom: 0
 	&__buttons
+		margin-bottom: -10px
 		display: flex
 		align-items: flex-start
 		flex-wrap: wrap
 	&__btn
 		margin-bottom: 10px
 		+r(767)
-			margin-bottom: 10px
 			height: auto
 			min-height: 48px
 			line-height: 1.2
@@ -118,3 +122,33 @@
 		font-weight: 300
 		font-size: 12px
 		margin: 16px 11px 10px   
+.reservations-form
+	+r(991)
+		margin-top: 20px
+	&__row
+		&_input
+			max-width: 412px 
+			+r(991)
+				max-width: 100%
+		&:not(:first-child)
+			margin-top: 15px
+	&__info
+		margin-top: 9px
+		font-size: 12px
+		letter-spacing: -0.005em 
+.input input,
+.textarea textarea
+		padding: 15px 20px
+		height: 50px
+		width: 100%
+		background-color: #f6f6f6
+		border: 1px solid #bebebe
+		border-radius: 10px
+		color: black
+		font-family: "Open Sans", sans-serif
+		font-size: 14px
+		font-weight: 300
+.textarea
+	textarea
+		height: 109px
+		resize: none
