@@ -1,0 +1,101 @@
+.about
+	margin-top: 66px
+	+sm
+		margin-top: 30px
+	&__content
+		padding-right: 20px
+		+r(992px)
+			padding-right: 0
+	&__col
+		&:not(:first-child)
+			+r(992)
+				margin-top: 10px
+	&__wrap
+		position: relative
+		padding-left: 35px
+		height: 100%
+		+r(992)
+			padding-left: 0
+		&:before
+			position: absolute
+			content: "" 
+			top: 0
+			left: -15px
+			bottom: 0
+			border-left: 1px dotted #ccc 
+			+sm
+				display: none
+	&__head
+		position: relative
+		padding-right: 275px
+		+sm
+			padding-right: 0
+	&__title
+		font-weight: 300 
+	&__best-price
+		position: absolute
+		top: -14px
+		right: 0
+		+sm
+			display: none
+	&__list
+		margin-bottom: 0
+		li
+			position: relative
+			display: block
+			+r(992)
+				padding-left: 20px
+			&:not(:first-child)
+				margin-top: 4px
+			&:before,
+			&:after
+				position: absolute
+				content: "" 
+				background-color: #d6d6d6 
+			&:before
+				top: 7px
+				left: -17px
+				width: 1px
+				height: 7px
+				+r(992)
+					left: 3px
+			&:after
+				top: 10px
+				left: -20px
+				width: 7px
+				height: 1px
+				+r(992)
+					left: 0
+		a
+			color: #2e4281
+			font-size: 14px
+			font-weight: 400
+			border-bottom: 1px dotted 
+
+.best-price
+	color: $white 
+	display: table
+	&__text
+		padding-right: 16px
+		max-width: 195px
+		color: #8d8d8d
+		font-size: 11px
+		font-weight: 600 
+		text-align: right
+		vertical-align: middle
+		letter-spacing: -0.01em 
+		display: table-cell
+	&__btn
+		padding-top: 23px
+		width: 78px
+		height: 78px
+		text-align: center
+		font-size: 14px
+		font-weight: 700
+		line-height: 15px
+		border-radius: 50%
+		background-color: #c82f23
+		background-image: linear-gradient(to top, #be3d2b 0%, #ff2f06 100%)
+		box-shadow: 2.5px 4.3px 21px rgba(0, 0, 0, 0.3)
+		vertical-align: top
+		display: table-cell

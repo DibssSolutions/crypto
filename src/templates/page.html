@@ -36,38 +36,115 @@ menuActiveIndex: 1
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-3">
+					<!-- begin advantage -->
 					<div class="advantage">
 						<div class="advantage__img">
 							<img src="./img/reservation-img.png" alt="img">
 						</div>
 						<div class="advantage__text">Бронирование в любое удобное время</div>
 					</div>
+					<!-- end advantage -->
 				</div>
 				<div class="col-md-6 col-lg-3">
+					<!-- begin advantage -->
 					<div class="advantage">
 						<div class="advantage__img">
 							<img src="./img/round-the-clock.png" alt="img">
 						</div>
 						<div class="advantage__text">Круглосуточный центр поддержки</div>
 					</div>
+					<!-- end advantage -->
 				</div>
 				<div class="col-md-6 col-lg-3">
+					<!-- begin advantage -->
 					<div class="advantage">
 						<div class="advantage__img">
 							<img src="./img/purse-img.png" alt="img">
 						</div>
 						<div class="advantage__text">Доступные цены и выгодные тарифы</div>
 					</div>
+					<!-- end advantage -->
 				</div>
 				<div class="col-md-6 col-lg-3">
+					<!-- begin advantage -->
 					<div class="advantage">
 						<div class="advantage__img">
 							<img src="./img/marker-img.png" alt="img">
 						</div>
 						<div class="advantage__text">Удобное расположение 10 минут до центра</div>
 					</div>
+					<!-- end advantage -->
 				</div>
 			</div>
+			<!-- begin filter -->
+			<form action="" class="filter">
+				<div class="filter__col">
+					<div class="filter__group">
+						<label for="calendar-start" class="filter__label">Дата заезда:</label>
+						<div class="filter__input filter__input_calendar">
+							<span class="icon-calendar"></span>
+							<input type="text" class="js-calendar" id="calendar-start" name="start" value="01.05.2018">
+						</div>
+					</div>
+				</div>
+				<div class="filter__col">
+					<div class="filter__group">
+						<label for="calendar-end" class="filter__label">Дата выезда:</label>
+						<div class="filter__input filter__input_calendar">
+							<span class="icon-calendar"></span>
+							<input type="text" class="js-calendar" id="calendar-end" name="end" value="04.05.2018">
+						</div>
+					</div>
+				</div>
+				<div class="filter__col">
+					<div class="filter__group">
+						<label for="adults" class="filter__label">Взрослых:</label>
+						<div class="filter__input">
+							<input type="text" id="adults" value="8">
+						</div>
+					</div>
+				</div>
+				<div class="filter__col">
+					<div class="filter__group">
+						<label for="children" class="filter__label">Детей:</label>
+						<div class="filter__input">
+							<input type="text" id="children" value="16">
+						</div>
+					</div>
+				</div>
+				<div class="filter__col">
+					<button class="filter__submit btn" type="submit"><span class="btn__text">Найти</span></button>
+				</div>
+			</form>
+			<!-- end filter -->
+			<!-- begin about -->
+			<div class="about">
+				<div class="about__row row">
+					<div class="about__col col-lg-6">
+						<div class="about__content">
+							<h2 class="about__title">Подробно о нашем отеле</h2>
+							<p>Гостиница выгодно расположена в респектабельном Московском районе, за 20 минут можно добраться до аэропорта Пулково, ж/д вокзалов и исторического центра города. Из окон отеля открывается красивый вид на площадь Чернышевского и Московский парк Победы. В 10 минутах от гостиницы расположен Петербургский Спортивно-концертный комплекс (СКК) – традиционное место проведения международных, российских выставок и развлекательных мероприятий.</p>
+						</div>
+					</div>
+					<div class="about__col col-lg-6">
+						<div class="about__wrap">
+							<div class="about__head">
+								<h2 class="about__title">Номерной фонд:</h2>
+								<a href="#" class="about__best-price best-price">
+									<span class="best-price__text">Воспользуйтесь сервисом онлайн-бронирования номеров</span>
+									<span class="best-price__btn">Лучшая цена</span>
+								</a>
+							</div>
+							<ul class="about__list">
+								{% for text in ['Стандарт NEW', 'Одноместный бизнес c кондиционером', 'Одноместный бизнес', 'Двухместный эконом (twin)', 'Двухместный эконом (double)', 'Двухместный стандарт', 'Бизнес', 'Двухместный комфорт', 'Двухместный бизнес-комфорт', 'Двухместный бизнес с кондиционером', 'Комфорт двухкомнатный', 'Люкс'] %}
+									<li><a href="#">{{ text }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end about -->
 		</div>
 	</div>
 	<!-- end wrapper -->
