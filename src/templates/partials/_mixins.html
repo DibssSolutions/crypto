@@ -1,14 +1,30 @@
 {% macro icon(i) %}
 <svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
-{% macro nav(props) %}
+{% macro nav(menuActiveIndex, menuClass) %}
 <!-- begin navigation -->
-<nav class="navigation">
-	<ul class="menu">
+<div class="navigation js-navigation">
+	<ul class="menu{% if menuClass %}{{ menuClass }}{% endif %}">
 		{% for text in ['Главная', 'Номера и цены', 'Услуги', 'Фотогалерея', 'Контакты'] %}
-			<li class="menu__item{% if props.activeIndex == loop.index %} is-active{% endif %}"><a class="menu__link" href="#">{{ text }}</a></li>
+			<li class="menu__item{% if menuActiveIndex == loop.index %} is-active{% endif %}"><a class="menu__link" href="#">{{ text }}</a></li>
 		{% endfor %}
 	</ul>
-</nav>
+	<div class="navigation__block">
+		<!-- begin reservation -->
+		<div class="reservation">
+			<a href="#" class="btn">
+				<span class="icon-reservation"></span>
+				<span class="btn__text">Забронировать</span>
+			</a>
+		</div>
+		<!-- end reservation -->
+		<!-- begin contacts -->
+		<div class="contacts">
+			<a href="tel:86128108797" class="contacts__phone phone"><span class="phone__icon"></span>8-612-810-87-97</a>
+			<div class="contacts__addres address">Россия, г. Санкт-Петербург, пл. Чернышевского, 11</div>
+		</div>
+		<!-- end contacts -->
+	</div>
+</div>
 <!-- end navigation -->
 {% endmacro %}
