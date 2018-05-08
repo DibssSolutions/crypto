@@ -1,3 +1,5 @@
+{% import "partials/_mixins.html" as mixins %}
+{% macro block(menuActiveIndex, menuClass) %}
 <!-- begin header -->
 <header class="header js-header">
 	<div class="container">
@@ -27,7 +29,8 @@
 				<span class="btn-menu__line"></span>
 			</button>
 		</div>
-		{{ mixins.nav() }}
+		{{ mixins.nav(menuActiveIndex, menuClass) }}
 	</div>
 </header>
 <!-- end header -->
+{% endmacro %}
