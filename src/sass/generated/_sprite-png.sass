@@ -1,8 +1,14 @@
 $icons: (0:0)
-$icons: map-merge($icons,('facebook': (X: -30px, Y:-72px, W: 10px, H: 19px, TW: 142px, TH: 110px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('facebook@2x': (X: 0px, Y:-72px, W: 20px, H: 38px, TW: 142px, TH: 110px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('phone@2x': (X: 0px, Y:0px, W: 72px, H: 62px, TW: 142px, TH: 110px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('reservation': (X: -82px, Y:0px, W: 60px, H: 60px, TW: 142px, TH: 110px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook': (X: -40px, Y:-128px, W: 10px, H: 19px, TW: 185px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook@2x': (X: -152px, Y:-74px, W: 20px, H: 38px, TW: 185px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('ordinator': (X: -152px, Y:-36px, W: 28px, H: 28px, TW: 185px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('phone@2x': (X: 0px, Y:0px, W: 72px, H: 62px, TW: 185px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('reservation-gr': (X: -152px, Y:0px, W: 33px, H: 26px, TW: 185px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('reservation': (X: -82px, Y:0px, W: 60px, H: 60px, TW: 185px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('safe': (X: -70px, Y:-72px, W: 31px, H: 31px, TW: 185px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('tv': (X: -111px, Y:-72px, W: 26px, H: 28px, TW: 185px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('wi-fi': (X: 0px, Y:-128px, W: 30px, H: 23px, TW: 185px, TH: 151px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('wi-fi@2x': (X: 0px, Y:-72px, W: 60px, H: 46px, TW: 185px, TH: 151px, IMG: '../img/sprite.png')))
 
 
 // Gets an attribute from the sass map
@@ -15,6 +21,7 @@ $icons: map-merge($icons,('reservation': (X: -82px, Y:0px, W: 60px, H: 60px, TW:
   width: icon-attr($iconName, W)
   height: icon-attr($iconName, H)
   background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+  display: inline-block
 @mixin sprite-position($iconName)
   background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
 @mixin sprite-retina($iconName)
@@ -44,13 +51,19 @@ $icons: map-merge($icons,('reservation': (X: -82px, Y:0px, W: 60px, H: 60px, TW:
 //  width: 10px
 //  height: 19px
 //  background-image: url('../img/sprite.png')
-//  background-position: -30px -72px
+//  background-position: -40px -128px
 //
 //.icon-facebook@2x
 //  width: 20px
 //  height: 38px
 //  background-image: url('../img/sprite.png')
-//  background-position: 0px -72px
+//  background-position: -152px -74px
+//
+//.icon-ordinator
+//  width: 28px
+//  height: 28px
+//  background-image: url('../img/sprite.png')
+//  background-position: -152px -36px
 //
 //.icon-phone@2x
 //  width: 72px
@@ -58,9 +71,39 @@ $icons: map-merge($icons,('reservation': (X: -82px, Y:0px, W: 60px, H: 60px, TW:
 //  background-image: url('../img/sprite.png')
 //  background-position: 0px 0px
 //
+//.icon-reservation-gr
+//  width: 33px
+//  height: 26px
+//  background-image: url('../img/sprite.png')
+//  background-position: -152px 0px
+//
 //.icon-reservation
 //  width: 60px
 //  height: 60px
 //  background-image: url('../img/sprite.png')
 //  background-position: -82px 0px
+//
+//.icon-safe
+//  width: 31px
+//  height: 31px
+//  background-image: url('../img/sprite.png')
+//  background-position: -70px -72px
+//
+//.icon-tv
+//  width: 26px
+//  height: 28px
+//  background-image: url('../img/sprite.png')
+//  background-position: -111px -72px
+//
+//.icon-wi-fi
+//  width: 30px
+//  height: 23px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -128px
+//
+//.icon-wi-fi@2x
+//  width: 60px
+//  height: 46px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -72px
 //
