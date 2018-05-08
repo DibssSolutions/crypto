@@ -4,14 +4,19 @@
 	padding: 53px 0 43px
 	display: flex
 	justify-content: space-between
+	+md
+		padding: 30px 0 
 .logo
 	width: 177px
+	+md
+		width: 100px
 	img
 		max-width: 100%
 		display: block
 .contacts
 	padding-top: 34px
-	&__phone
+	+md 
+		display: none
 	&__addres
 		padding-left: 42px 
 
@@ -20,20 +25,35 @@
 	font-weight: 300
 .reservation
 	padding-top: 34px
-.navigation
-	&__block
+	+md 
 		display: none
-		+sm
+.navigation
+	+md
+		position: fixed
+		top: 0
+		left: 0
+		width: 100vw
+		height: 100vh
+		text-align: center
+	&__block,
+	&__reservation.reservation,
+	&__contacts
+		display: none
+		+md
 			display: block
 .menu
 	display: table
 	width: 100%
 	text-align: center
+	+md
+		display: block
 	&__item,
 	li
 		position: relative
 		display: table-cell
 		vertical-align: top
+		+md
+			display: block
 		&:not(:first-child)
 			margin-left: 1px
 			&:before
@@ -57,9 +77,14 @@
 		display: block
 		z-index: 1
 		background-image: linear-gradient(to top, #2e4281 0%, #415db5 100%)
+		+md
+			background-image: none
+			color: $blue
 		&:hover
 			&:before
 				opacity: 1 
+				+md
+					opacity: 0
 		&:before
 			position: absolute
 			content: ""
@@ -94,10 +119,51 @@
 			border-radius: 0 10px 10px 0
 		.menu__item.is-active &,
 		li.is-active &
+			+md
+				color: $red
 			&:before,
 			&:after
 				opacity: 1 
+				+md
+					display: none
 				
 .btn-menu
-	span
+	position: relative
+	width: 52px
+	height: 56px
+	background: none
+	cursor: pointer
+	display: none
+	+md 
 		display: block
+	.header.is-open-menu &
+		&:before
+			transform: translate3d(3px,0,0) rotate(45deg)
+		&:after
+			transform: translate3d(3px,0,0) rotate(-45deg)
+		span 
+			opacity: 0
+			transform: scaleX(0.5)
+	span,
+	&:before,
+	&:after
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -10px
+		border-top: 2px solid #3a53a3
+		width: 20px
+	&:before,
+	&:after
+		content: ''
+		transition: transform 0.3s
+	span 
+		margin-top: -1px
+		transition: opacity 0.3s, transform 0.3s
+		transform-origin: left center
+	&:before
+		margin-top: -8px
+		transform-origin: left top
+	&:after
+		margin-top: 6px
+		transform-origin: left bottom
