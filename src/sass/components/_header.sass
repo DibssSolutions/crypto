@@ -7,7 +7,9 @@
 	+md
 		padding: 30px 0 
 .logo
+	position: relative
 	width: 177px
+	z-index: 101
 	+md
 		width: 100px
 	img
@@ -29,12 +31,23 @@
 		display: none
 .navigation
 	+md
-		position: fixed
+		position: absolute
 		top: 0
 		left: 0
+		padding: 120px 20px 40px
 		width: 100vw
-		height: 100vh
+		z-index: 100
 		text-align: center
+		opacity: 0
+		visibility: hidden
+		transition: opacity .25s linear, visibility .25s linear
+		-webkit-box-shadow: 0 0 -20px 10px rgba($black, 0.2) 
+		box-shadow: 0 0 20px 10px rgba($black, 0.2) 
+		background-color: $white
+	.header.is-open-menu &
+		+md
+			opacity: 1
+			visibility: visible
 	&__block,
 	&__reservation.reservation,
 	&__contacts
@@ -42,11 +55,15 @@
 		+md
 			display: block
 .menu
+	margin-bottom: 0
 	display: table
 	width: 100%
 	text-align: center
 	+md
 		display: block
+	&_main
+		border-radius: 10px 10px 0 0 
+		box-shadow: 4px 6.9px 24px rgba(0, 0, 0, 0.36)
 	&__item,
 	li
 		position: relative
@@ -99,9 +116,13 @@
 			.menu__item:first-child &,
 			li:first-child &
 				border-radius: 10px 0 0 10px 
+				.menu.menu_main &
+					border-radius: 10px 0 0 0
 			.menu__item:last-child &,
 			li:last-child &
 				border-radius: 0 10px 10px 0
+				.menu.menu_main &
+					border-radius: 0 10px 0 0
 		&:after
 			position: absolute
 			content: ""
@@ -114,9 +135,13 @@
 		.menu__item:first-child &,
 		li:first-child &
 			border-radius: 10px 0 0 10px 
+			.menu.menu_main &
+				border-radius: 10px 0 0
 		.menu__item:last-child &,
 		li:last-child &
 			border-radius: 0 10px 10px 0
+			.menu.menu_main &
+				border-radius: 0 10px 0 0
 		.menu__item.is-active &,
 		li.is-active &
 			+md
@@ -133,6 +158,7 @@
 	height: 56px
 	background: none
 	cursor: pointer
+	z-index: 101
 	display: none
 	+md 
 		display: block

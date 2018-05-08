@@ -4,7 +4,7 @@
 {% macro nav(menuActiveIndex, menuClass) %}
 <!-- begin navigation -->
 <div class="navigation js-navigation">
-	<ul class="menu{% if menuClass %}{{ menuClass }}{% endif %}">
+	<ul class="menu{% if menuClass %} {{ menuClass }}{% endif %}">
 		{% for text in ['Главная', 'Номера и цены', 'Услуги', 'Фотогалерея', 'Контакты'] %}
 			<li class="menu__item{% if menuActiveIndex == loop.index %} is-active{% endif %}"><a class="menu__link" href="#">{{ text }}</a></li>
 		{% endfor %}
