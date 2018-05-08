@@ -714,7 +714,7 @@
 
         obj.index = self.group.length;
 
-        if (obj.opts.smallBtn == 'auto') {
+        if (obj.opts.smallBtn === 'auto') {
           obj.opts.smallBtn = $.inArray(obj.type, ['html', 'inline', 'ajax']) > -1;
         }
 
@@ -1211,7 +1211,7 @@
         scaleX,
         scaleY;
 
-      if (self.isAnimating || !$content || !(current.type == 'image' && current.isLoaded && !current.hasError)) {
+      if (self.isAnimating || !$content || !(current.type === 'image' && current.isLoaded && !current.hasError)) {
         return;
       }
 
@@ -1290,7 +1290,7 @@
         $content = current.$content,
         end;
 
-      if (self.isAnimating || !$content || !(current.type == 'image' && current.isLoaded && !current.hasError)) {
+      if (self.isAnimating || !$content || !(current.type === 'image' && current.isLoaded && !current.hasError)) {
         return;
       }
 
@@ -1721,7 +1721,7 @@
           slide.src = found.url;
 
           // If we have default width/height values, we can calculate height for matching source
-          if (slide.width && slide.height && found.postfix == 'w') {
+          if (slide.width && slide.height && found.postfix === 'w') {
             slide.height = slide.width / slide.height * found.value;
             slide.width = found.value;
           }
@@ -1818,7 +1818,7 @@
         .attr('src', slide.src)
         .appendTo(slide.$content);
 
-      if (($img[0].complete || $img[0].readyState == 'complete') && $img[0].naturalWidth && $img[0].naturalHeight) {
+      if (($img[0].complete || $img[0].readyState === 'complete') && $img[0].naturalWidth && $img[0].naturalHeight) {
         $img.trigger('load');
       } else if ($img[0].error) {
         $img.trigger('error');
@@ -2133,7 +2133,7 @@
       if (slide.opts.protect && slide.$content && !slide.hasError) {
         // Disable right click
         slide.$content.on('contextmenu.fb', function(e) {
-          if (e.button == 2) {
+          if (e.button === 2) {
             e.preventDefault();
           }
 
@@ -2201,7 +2201,7 @@
         // Check if we need to animate opacity
         opacity = slide.opts.zoomOpacity;
 
-        if (opacity == 'auto') {
+        if (opacity === 'auto') {
           opacity = Math.abs(slide.width / slide.height - start.width / start.height) > 0.1;
         }
 
@@ -2382,7 +2382,7 @@
       // Try to focus on the first focusable element
       if (
         $(document.activeElement).is('[disabled]') ||
-        (current.opts.autoFocus && !(current.type == 'image' || current.type === 'iframe'))
+        (current.opts.autoFocus && !(current.type === 'image' || current.type === 'iframe'))
       ) {
         self.focus();
       }
@@ -2559,7 +2559,7 @@
         // Check if we need to animate opacity
         opacity = current.opts.zoomOpacity;
 
-        if (opacity == 'auto') {
+        if (opacity === 'auto') {
           opacity = Math.abs(current.width / current.height - end.width / end.height) > 0.1;
         }
 
@@ -2920,7 +2920,7 @@
 
       $el.on(transitionEnd, function(e) {
         // Skip events from child elements and z-index change
-        if (e && e.originalEvent && (!$el.is(e.originalEvent.target) || e.originalEvent.propertyName == 'z-index')) {
+        if (e && e.originalEvent && (!$el.is(e.originalEvent.target) || e.originalEvent.propertyName === 'z-index')) {
           return;
         }
 
@@ -3210,7 +3210,7 @@
       if (providerOpts.paramPlace && rez[providerOpts.paramPlace]) {
         urlParams = rez[providerOpts.paramPlace];
 
-        if (urlParams[0] == '?') {
+        if (urlParams[0] === '?') {
           urlParams = urlParams.substring(1);
         }
 
@@ -3219,7 +3219,7 @@
         for (var m = 0; m < urlParams.length; ++m) {
           var p = urlParams[m].split('=', 2);
 
-          if (p.length == 2) {
+          if (p.length === 2) {
             paramObj[p[0]] = decodeURIComponent(p[1].replace(/\+/g, ' '));
           }
         }
@@ -3267,7 +3267,7 @@
         src: url,
         origSrc: item.src,
         contentSource: provider,
-        contentType: type === 'image' ? 'image' : provider == 'gmap_place' || provider == 'gmap_search' ? 'map' : 'video'
+        contentType: type === 'image' ? 'image' : provider === 'gmap_place' || provider === 'gmap_search' ? 'map' : 'video'
       });
     } else if (url) {
       item.type = item.opts.defaultType;
@@ -3418,7 +3418,7 @@
       instance = self.instance,
       current = instance.current,
       $content = current.$content,
-      isTouchDevice = e.type == 'touchstart';
+      isTouchDevice = e.type === 'touchstart';
 
     // Do not respond to both (touch and mouse) events
     if (isTouchDevice) {
@@ -3426,7 +3426,7 @@
     }
 
     // Ignore right click
-    if (e.originalEvent && e.originalEvent.button == 2) {
+    if (e.originalEvent && e.originalEvent.button === 2) {
       return;
     }
 
@@ -3651,7 +3651,7 @@
     }
 
     // Sticky edges
-    if (swiping == 'x') {
+    if (swiping === 'x') {
       if (
         self.distanceX > 0 &&
         (self.instance.group.length < 2 || (self.instance.current.index === 0 && !self.instance.current.opts.loop))
@@ -3669,7 +3669,7 @@
     }
 
     self.sliderLastPos = {
-      top: swiping == 'x' ? 0 : self.sliderStartPos.top + self.distanceY,
+      top: swiping === 'x' ? 0 : self.sliderStartPos.top + self.distanceY,
       left: left
     };
 
@@ -3930,7 +3930,7 @@
     self.sliderLastPos = null;
 
     // Close if swiped vertically / navigate if horizontally
-    if (swiping == 'y' && !scrolling && Math.abs(self.distanceY) > 50) {
+    if (swiping === 'y' && !scrolling && Math.abs(self.distanceY) > 50) {
       // Continue vertical movement
       $.fancybox.animate(
         self.instance.current.$slide,
@@ -3942,13 +3942,13 @@
       );
 
       ret = self.instance.close(true, 200);
-    } else if (swiping == 'x' && self.distanceX > 50 && len > 1) {
+    } else if (swiping === 'x' && self.distanceX > 50 && len > 1) {
       ret = self.instance.previous(self.speedX);
-    } else if (swiping == 'x' && self.distanceX < -50 && len > 1) {
+    } else if (swiping === 'x' && self.distanceX < -50 && len > 1) {
       ret = self.instance.next(self.speedX);
     }
 
-    if (ret === false && (swiping == 'x' || swiping == 'y')) {
+    if (ret === false && (swiping === 'x' || swiping === 'y')) {
       if (scrolling || len < 2) {
         self.instance.centerSlide(self.instance.current, 150);
       } else {
@@ -4080,7 +4080,7 @@
           break;
 
         case 'zoom':
-          if (current.type == 'image' && (current.isLoaded || current.$ghost)) {
+          if (current.type === 'image' && (current.isLoaded || current.$ghost)) {
             if (instance.canPan()) {
               instance.scaleToFit();
             } else if (instance.isScaledDown()) {
@@ -4095,7 +4095,7 @@
     };
 
     // Ignore right click
-    if (e.originalEvent && e.originalEvent.button == 2) {
+    if (e.originalEvent && e.originalEvent.button === 2) {
       return;
     }
 
@@ -4972,7 +4972,7 @@
         gallery = getGalleryID(instance);
 
         // Make sure gallery start index matches index from hash
-        if (gallery && url.gallery && gallery == url.gallery) {
+        if (gallery && url.gallery && gallery === url.gallery) {
           instance.currIndex = url.index - 1;
         }
       },
@@ -5076,7 +5076,7 @@
 
       if (fb) {
         // Now, compare hash values
-        if (fb.currentHash && fb.currentHash !== url.gallery + '-' + url.index && !(url.index === 1 && fb.currentHash == url.gallery)) {
+        if (fb.currentHash && fb.currentHash !== url.gallery + '-' + url.index && !(url.index === 1 && fb.currentHash === url.gallery)) {
           fb.currentHash = null;
 
           fb.close();

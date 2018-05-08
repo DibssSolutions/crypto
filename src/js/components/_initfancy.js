@@ -1,1 +1,1 @@
-import fancybox from '../lib/jquery.fancybox.min';
+import fancybox from '../lib/jquery.fancybox';
