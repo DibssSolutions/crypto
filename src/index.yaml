@@ -6,4 +6,8 @@ PageList:
 - file: hotel-room.html
   ready: 50
 - file: gallery.html
+  ready: 100
+- file: services.html
+  ready: 100  
+- file: contacts.html
   ready: 50
