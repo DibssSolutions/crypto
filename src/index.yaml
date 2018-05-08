@@ -7,3 +7,5 @@ PageList:
   ready: 50
 - file: gallery.html
   ready: 50
+- file: reservation.html
+  ready: 50
