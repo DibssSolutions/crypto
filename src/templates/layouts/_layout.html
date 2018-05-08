@@ -37,6 +37,7 @@
             myPlacemark = new ymaps.Placemark([55.755773, 37.617761]);
 
           myMap.geoObjects.add(myPlacemark);
+          myMap.behaviors.disable('scrollZoom');
 
           myPlacemark.events
             .add('mouseenter', function(e) {
